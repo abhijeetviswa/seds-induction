@@ -165,7 +165,7 @@ int main() {
 
                     struct json_object *cmdline = json_object_new_string(stat->cmdline);
                     json_object_object_add(jproc, "name", cmdline);
-
+                    
                     struct json_object *mem = json_object_new_int((int)stat->mem);
                     json_object_object_add(jproc, "ram_usage", mem);
 
@@ -397,7 +397,7 @@ void hit_endpoint(const char *json)
         curl_easy_setopt(curl, CURLOPT_URL, "https://fathomless-thicket-66026.herokuapp.com/viswa/");
         curl_easy_setopt(curl, CURLOPT_POST, 1L);
         curl_easy_setopt(curl, CURLOPT_POSTFIELDS, json);
-        curl_easy_setopt(curl,CURLOPT_VERBOSE, 1L);
+        curl_easy_setopt(curl,CURLOPT_VERBOSE, 0L);
         
         struct curl_slist *chunk = NULL;
         chunk = curl_slist_append(chunk, "Content-Type: application/json");
