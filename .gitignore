@@ -1,0 +1,7 @@
+# Binaries and gcc outputs
+procscrape
+*.s
+*.o
+
+# dev enviorment
+.vscode/
